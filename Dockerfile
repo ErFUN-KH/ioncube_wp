@@ -13,3 +13,6 @@ RUN tar xvzfC /tmp/ioncube_loaders_lin_x86-64.tar.gz /tmp/ && \
         > /usr/local/etc/php/conf.d/00-ioncube.ini && \
 	rm /tmp/ioncube_loaders_lin_x86-64.tar.gz && \
 	rm -rf /tmp/ioncube
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["apache2-foreground"]
